@@ -19,7 +19,9 @@
         <main>
             <div class="container">
                 <section>
-                    <p>最終アクセス日時:<span id="time"></span></p>
+                    <p>円周率は<span id="pi"></span>です。</p>
+                    <p>普通に切り捨てると<span id="floor"></span>です。</p>
+                    <p>少数第2位で割り切ると<span id="output"></span>です。</p>
                 </section>
             </div><!-- /.container -->
         </main>
@@ -28,22 +30,6 @@
                 <p>JavaScript Samples</p>
             </div><!-- /.container -->
         </footer>
-
-        <script>
-            'use strict';
-
-            const now =new Date();
-            const year = now.getFullYear();
-            const month = now.getMonth();
-            const date = now.getDate();
-            let hour = now.getHours();
-            if(hour >= 13){
-                hour -= 12;
-            }
-            const min = now.getMinutes();
-
-            const output = `${year}/${month + 1}/${date} ${hour}:${min}`;
-            document.getElementById('time').textContent = output;
-        </script>
+        <script src="index.js"></script>
     </body>
 </html>
